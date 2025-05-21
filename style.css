@@ -1,0 +1,136 @@
+:root {
+      --bg: #f3f4f6;
+      --box-bg: #ffffff;
+      --text: #111827;
+      --accent: #3b82f6;
+    }
+
+    [data-theme="dark"] {
+      --bg: #111827;
+      --box-bg: #1f2937;
+      --text: #f3f4f6;
+      --accent: #3b82f6;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      text-align: center;
+      padding: 1rem;
+      background: var(--box-bg);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    header h1 {
+      margin: 0.5rem 0;
+      font-size: 1.8rem;
+    }
+
+    .theme-toggle {
+      cursor: pointer;
+      background: var(--accent);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      color: white;
+      margin-top: 10px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 2rem;
+    }
+
+    .box {
+      background-color: var(--box-bg);
+      color: var(--text);
+      padding: 1.5rem;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 350px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .box h2 {
+      margin-top: 0;
+    }
+
+    button {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin-top: 0.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+    }
+
+    li {
+      background: #e5e7eb;
+      padding: 0.5rem;
+      margin: 0.3rem 0;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.3s;
+    }
+
+    [data-theme="dark"] li {
+      background: #374151;
+    }
+
+    li.done {
+      text-decoration: line-through;
+      color: gray;
+    }
+
+    .remove-btn {
+      background: red;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 22px;
+      height: 22px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+      }
+    }

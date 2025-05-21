@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Motivation & Productivity App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body data-theme="light">
+  <header>
+    <h1>🌟 Motivation & Productivity Hub</h1>
+    <button class="theme-toggle" onclick="toggleTheme()">🌗 Toggle Theme</button>
+  </header>
+
+  <div class="container">
+    <!-- Daily Quote -->
+    <div class="box">
+      <h2>💬 Daily Motivation</h2>
+      <button onclick="getQuote()">New Quote</button>
+      <p id="quote" class="quote">Loading...</p>
+    </div>
+
+    <!-- To-Do List -->
+    <div class="box">
+      <h2>✅ To-Do List</h2>
+      <input id="taskInput" placeholder="New task" />
+      <button onclick="addTask()">Add</button>
+      <ul id="taskList"></ul>
+    </div>
+
+    <!-- Notes -->
+    <div class="box">
+      <h2>📝 Notes</h2>
+      <textarea id="noteText" rows="4" placeholder="Write your note..."></textarea>
+      <button onclick="saveNote()">Save</button>
+      <ul id="noteList"></ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
